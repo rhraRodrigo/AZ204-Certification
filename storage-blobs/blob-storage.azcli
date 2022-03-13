@@ -1,0 +1,24 @@
+# Create blob storage resources using the .NET client library
+
+az login
+
+az group create --location eastus --name az204-blob-rg 
+
+az storage account create --resource-group az204-blob-rg --name storaaccountblob20220312 --location eastus --sku Standard_LRS
+
+#   Get connection string in Storage account > Security and network session > Acess keys (key1)
+#   DefaultEndpointsProtocol=https;AccountName=storaaccountblob20220312;AccountKey=6ZlVwQgNEd4zrk6xuoayCOlcS98BltiI3tY7BO9VwtEssPe61KwF3Su3jh53Xt20qAWx/C7IeL8Q+AStZtb8aA==;EndpointSuffix=core.windows.net
+
+# Creating dotnet project and testing build
+dotnet new console -n az204-blob
+cd az204-blob
+dotnet build
+mkdir data
+
+# .NET Blob storage client library installer
+dotnet add package Azure.Storage.Blobs
+
+# before implement your code in Program.cs
+
+dotnet build
+dotnet run

@@ -1,0 +1,9 @@
+az login
+
+az group create --name az204-blob-rg-2 --location eastus
+
+az storage account create --resource-group az204-blob-rg-2 --name saaz204rodrigo --location eastus --kind BlockBlobStorage --sku Premium_LRS
+
+az group delete --name az204-blob-rg-2 --no-wait
+
+az storage account delete --name saaz204rodrigo --resource-group az204-blob-rg-2

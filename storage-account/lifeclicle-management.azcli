@@ -1,0 +1,2 @@
+#Deve ter uma storage account criada
+az storage account management-policy create --account-name storagelifecycle20220307 --policy 'policy.json' --resource-group cloud-shell-storage-eastus
