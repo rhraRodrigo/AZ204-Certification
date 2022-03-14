@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = az204_blob
-build_property.ProjectDir = C:\Users\rodrigo.h.de.andrade\AZ-204\storage-blobs\az204-blob\
+build_property.ProjectDir = c:\Users\rodrigo.h.de.andrade\AZ-204\AZ204-Certification\storage-blobs\az204-blob\

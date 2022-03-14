@@ -22,3 +22,5 @@ dotnet add package Azure.Storage.Blobs
 
 dotnet build
 dotnet run
+
+az group delete --name az204-blob-rg --no-wait
