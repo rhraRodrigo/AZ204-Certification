@@ -1,0 +1,44 @@
+az login
+
+# Variables
+$resourceGroupName="az204-cosmos-rg"
+$myCosmosDBacct="cosmos-db-act-az204"
+
+az group create --location eastus --name $resourceGroupName
+
+az cosmosdb create --name $myCosmosDBacct --resource-group $resourceGroupName
+
+# Store document endpoint created after cosmosdb created
+# documentEndpoint: "https://cosmos-db-act-az204-eastus.documents.azure.com:443/"
+
+# Retrieve the primary key
+az cosmosdb keys list --name $myCosmosDBacct --resource-group $resourceGroupName
+
+# Creating the folder for project and accessing it
+md az204-cosmos
+cd az204-cosmos
+
+# Create .NET app console
+dotnet new console
+
+# This instruction opens your project separately in VS code
+code . -r
+
+# Use this instruction to add dotnet package Azure Comos in your project
+dotnet add package Microsoft.Azure.Cosmos
+
+# Adding using instructions to include Microsoft cosmos and async operations on your procject
+# using System.Threading.Tasks;
+# using Microsoft.Azure.Cosmos;
+
+# Implement your code to connect cosmosdb, to create Database and to Create Container. All methods are in Program.cs
+
+# Execute your project
+dotnet run
+
+# This is your output:
+
+# Beginning operations...
+# Created Database: az204Database
+# Created Container: az204Container
+# End of program, press any key to exit.
