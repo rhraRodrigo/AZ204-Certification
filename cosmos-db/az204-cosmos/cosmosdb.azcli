@@ -42,3 +42,6 @@ dotnet run
 # Created Database: az204Database
 # Created Container: az204Container
 # End of program, press any key to exit.
+
+# To clean the resources, execute this code as follows:
+az group delete --name $resourceGroupName --no-wait
